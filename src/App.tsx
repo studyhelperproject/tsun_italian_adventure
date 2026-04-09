@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { TitleScreen } from './components/TitleScreen';
 import { StageSelect } from './components/StageSelect';
-import { GameStage } from './components/GameStage';
+import { GameProvider } from './engine/GameContext';
 import { allStages } from './stages';
 import { StageConfig } from './types';
 
@@ -55,11 +55,12 @@ export default function App() {
       )}
 
       {view === 'playing' && currentStage && (
-        <GameStage 
-          config={currentStage} 
-          onBack={() => setView('map')}
-          onComplete={handleStageComplete}
-        />
+        <GameProvider metadata={currentStage.metadata}>
+          <currentStage.Component 
+            onBack={() => setView('map')}
+            onComplete={handleStageComplete}
+          />
+        </GameProvider>
       )}
     </div>
   );

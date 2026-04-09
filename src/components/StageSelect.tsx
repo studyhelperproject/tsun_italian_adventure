@@ -25,12 +25,13 @@ export const StageSelect: React.FC<StageSelectProps> = ({ stages, clearedStages,
       
       <div className="grid grid-cols-4 sm:grid-cols-5 gap-3">
         {stages.map((stage) => {
-          const isCleared = clearedStages.includes(stage.id);
-          const isLocked = stage.id > 1 && !clearedStages.includes(stage.id - 1);
+          const id = stage.metadata.id;
+          const isCleared = clearedStages.includes(id);
+          const isLocked = id > 1 && !clearedStages.includes(id - 1);
           
           return (
             <motion.button
-              key={stage.id}
+              key={id}
               whileHover={!isLocked ? { scale: 1.05, rotate: 2 } : {}}
               whileTap={!isLocked ? { scale: 0.95 } : {}}
               onClick={() => !isLocked && onSelect(stage)}
@@ -42,7 +43,7 @@ export const StageSelect: React.FC<StageSelectProps> = ({ stages, clearedStages,
               `}
             >
               <span className={`text-xl font-black ${isCleared ? 'text-green-600' : 'text-black'}`}>
-                {stage.id}
+                {id}
               </span>
               
               {isCleared && (

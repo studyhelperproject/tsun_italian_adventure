@@ -1,28 +1,45 @@
 import { StageConfig } from '../types';
-import { stage1 } from './stage1';
-import { stage2 } from './stage2';
-import { stage3 } from './stage3';
-import { stage4 } from './stage4';
-import { stage5 } from './stage5';
-import { stage6 } from './stage6';
-import { stage7 } from './stage7';
-import { stage8 } from './stage8';
-import { stage9 } from './stage9';
-import { stage10 } from './stage10';
-import { stage11 } from './stage11';
-import { stage12 } from './stage12';
-import { stage13 } from './stage13';
-import { stage14 } from './stage14';
-import { stage15 } from './stage15';
-import { stage16 } from './stage16';
-import { stage17 } from './stage17';
-import { stage18 } from './stage18';
-import { stage19 } from './stage19';
-import { stage20 } from './stage20';
+
+import * as stage1 from './stage1';
+import * as stage2 from './stage2';
+import * as stage3 from './stage3';
+import * as stage4 from './stage4';
+import * as stage5 from './stage5';
+import * as stage6 from './stage6';
+import * as stage7 from './stage7';
+import * as stage8 from './stage8';
+import * as stage9 from './stage9';
+import * as stage10 from './stage10';
+import * as stage11 from './stage11';
+import * as stage12 from './stage12';
+import * as stage13 from './stage13';
+import * as stage14 from './stage14';
+import * as stage15 from './stage15';
+import * as stage16 from './stage16';
+import * as stage17 from './stage17';
+import * as stage18 from './stage18';
+import * as stage19 from './stage19';
+import * as stage20 from './stage20';
 
 export const allStages: StageConfig[] = [
-  stage1, stage2, stage3, stage4, stage5,
-  stage6, stage7, stage8, stage9, stage10,
-  stage11, stage12, stage13, stage14, stage15,
-  stage16, stage17, stage18, stage19, stage20
+  { metadata: stage1.metadata, Component: stage1.Component },
+  { metadata: stage2.metadata, Component: stage2.Component },
+  { metadata: stage3.metadata, Component: stage3.Component },
+  { metadata: stage4.metadata, Component: stage4.Component },
+  { metadata: stage5.metadata, Component: stage5.Component },
+  { metadata: stage6.metadata, Component: stage6.Component },
+  { metadata: stage7.metadata, Component: stage7.Component },
+  { metadata: stage8.metadata, Component: stage8.Component },
+  { metadata: stage9.metadata, Component: stage9.Component },
+  { metadata: stage10.metadata, Component: stage10.Component },
+  { metadata: stage11.metadata, Component: stage11.Component },
+  { metadata: stage12.metadata, Component: stage12.Component },
+  { metadata: stage13.metadata, Component: stage13.Component },
+  { metadata: stage14.metadata, Component: stage14.Component },
+  { metadata: stage15.metadata, Component: stage15.Component },
+  { metadata: stage16.metadata, Component: stage16.Component },
+  { metadata: stage17.metadata, Component: stage17.Component },
+  { metadata: stage18.metadata, Component: stage18.Component },
+  { metadata: stage19.metadata, Component: stage19.Component },
+  { metadata: stage20.metadata, Component: stage20.Component },
 ];
